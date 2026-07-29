@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memories ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0f172a,#4c1d95);
+overflow:hidden;
+}
+
+body::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.15) 2px,transparent 3px),
+radial-gradient(circle at 80% 30%,rgba(255,255,255,.15) 2px,transparent 3px),
+radial-gradient(circle at 30% 80%,rgba(255,255,255,.15) 2px,transparent 3px),
+radial-gradient(circle at 70% 70%,rgba(255,255,255,.15) 2px,transparent 3px);
+background-size:220px 220px;
+animation:move 15s linear infinite;
+}
+
+@keyframes move{
+0%{transform:translateY(0);}
+100%{transform:translateY(-220px);}
+}
+
+.container{
+position:relative;
+z-index:10;
+width:1200px;
+height:680px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.photos{
+display:grid;
+grid-template-columns:repeat(2,230px);
+gap:25px;
+margin-bottom:35px;
+}
+
+.photos img{
+width:230px;
+height:230px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 12px 25px rgba(0,0,0,.35);
+transition:.3s;
+}
+
+.photos img:hover{
+transform:scale(1.05);
+}
+
+h1{
+color:white;
+font-size:42px;
+margin-bottom:20px;
+}
+
+p{
+width:850px;
+text-align:center;
+color:white;
+font-size:22px;
+line-height:1.8;
+}
+
+button{
+margin-top:40px;
+padding:16px 50px;
+font-size:22px;
+border:none;
+border-radius:50px;
+background:white;
+color:#4c1d95;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+@media(max-width:900px){
+
+.container{
+width:95%;
+height:auto;
+padding:20px;
+}
+
+.photos{
+grid-template-columns:repeat(2,150px);
+gap:15px;
+}
+
+.photos img{
+width:150px;
+height:150px;
+}
+
+h1{
+font-size:28px;
+}
+
+p{
+width:95%;
+font-size:16px;
+}
+
+button{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="photos">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+</div>
+
+<h1>That's My NAKHREEE WALI 🫶</h1>
+
+<p>
+Havinggg you in my lifeeee was just a blisss... Every single moment with you felt so special. Your smile, your nakhra, your voice, your cute little habits... everything about you is my favourite. You are the besttt!! 😭🧿 Thank you for being the most beautiful part of my life.
+</p>
+
+<button onclick="location.href='page4.html'">
+Continue →
+</button>
+
+</div>
+
+</body>
+</html>
