@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Introduction</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#0f172a,#4c1d95);
+
+overflow:hidden;
+
+}
+
+/* Background Sparkles */
+
+body::before{
+
+content:"";
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:
+radial-gradient(circle at 15% 20%,rgba(255,255,255,.18) 2px,transparent 3px),
+radial-gradient(circle at 85% 25%,rgba(255,255,255,.18) 2px,transparent 3px),
+radial-gradient(circle at 25% 80%,rgba(255,255,255,.15) 2px,transparent 3px),
+radial-gradient(circle at 75% 70%,rgba(255,255,255,.15) 2px,transparent 3px);
+
+background-size:220px 220px;
+
+animation:move 15s linear infinite;
+
+}
+
+@keyframes move{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-220px);
+}
+
+}
+
+/* Laptop Container */
+
+.container{
+
+position:relative;
+
+z-index:10;
+
+width:1200px;
+
+height:680px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+/* Title */
+
+h1{
+
+font-family:'Cinzel',serif;
+
+font-size:110px;
+
+letter-spacing:12px;
+
+color:white;
+
+animation:fade 1.5s ease;
+
+}
+
+/* Subtitle */
+
+.tagline{
+
+margin-top:15px;
+
+margin-left:330px;
+
+font-family:'Great Vibes',cursive;
+
+font-size:34px;
+
+color:white;
+
+opacity:.95;
+
+animation:slide 2s ease;
+
+}
+
+/* Button */
+
+button{
+
+margin-top:90px;
+
+padding:16px 48px;
+
+font-size:22px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#4c1d95;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
+/* Animations */
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes slide{
+
+from{
+
+opacity:0;
+
+transform:translateX(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.container{
+
+width:90%;
+
+height:auto;
+
+}
+
+h1{
+
+font-size:52px;
+
+letter-spacing:5px;
+
+}
+
+.tagline{
+
+margin-left:120px;
+
+font-size:24px;
+
+}
+
+button{
+
+font-size:18px;
+
+padding:14px 35px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>INTRODUCING</h1>
+
+<div class="tagline">
+
+someone I kept falling for...
+
+</div>
+
+<button onclick="location.href='page2.html'">
+
+Continue →
+
+</button>
+
+</div>
+
+</body>
+
+</html>
